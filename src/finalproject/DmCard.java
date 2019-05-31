@@ -16,7 +16,7 @@ public class DmCard extends Square{
     public DmCard(int x, int y){
         super(x, y);
         try{
-            image = ImageIO.read(new File("\\Users\\dillmanl2093\\Documents\\NetBeansProjects\\MatchingGame\\src\\Matchingame\\dm.JPG"));
+            image = ImageIO.read(new File("\\Users\\dillmanl2093\\Documents\\NetBeansProjects\\FinalProject\\src\\finalproject\\dm.jpg"));
         }
         catch(Exception e){
             System.out.println("DmCard: error");
