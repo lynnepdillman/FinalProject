@@ -17,7 +17,7 @@ public class AndyCard extends Square{
         super(x, y);
         back = new DmCard(x, y);
         try{
-            image = ImageIO.read(new File("\\Users\\dillmanl2093\\Documents\\NetBeansProjects\\MatchingGame\\src\\Matchingame\\andy.JPG"));
+            image = ImageIO.read(new File("\\Users\\dillmanl2093\\Documents\\NetBeansProjects\\FinalProject\\src\\finalproject\\andy.jpg"));
         }
         catch(Exception e){
             System.out.println("AndyCard: error");
