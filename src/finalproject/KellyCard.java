@@ -22,7 +22,7 @@ public class KellyCard extends Square
 		back = new DmCard(x, y);
 		try
 		{
-			image = ImageIO.read(new File("\\Users\\dillmanl2093\\Documents\\NetBeansProjects\\MatchingGame\\src\\Matchingame\\kelly.JPG"));
+			image = ImageIO.read(new File("\\Users\\dillmanl2093\\Documents\\NetBeansProjects\\FinalProject\\src\\finalproject\\kelly.JPG"));
 
 		}
 		catch(Exception e)
