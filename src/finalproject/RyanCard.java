@@ -22,7 +22,7 @@ public class RyanCard extends Square
 		back = new DmCard(x, y);
 		try
 		{
-			image = ImageIO.read(new File("\\Users\\dillmanl2093\\Documents\\NetBeansProjects\\MatchingGame\\src\\Matchingame\\ryan.JPG"));
+			image = ImageIO.read(new File("\\Users\\dillmanl2093\\Documents\\NetBeansProjects\\FinalProject\\src\\finalproject\\ryan.JPG"));
 
 		}
 		catch(Exception e)
