@@ -22,7 +22,7 @@ public class PamCard extends Square
 		back = new DmCard(x, y);
 		try
 		{
-			image = ImageIO.read(new File("\\Users\\dillmanl2093\\Documents\\NetBeansProjects\\MatchingGame\\src\\Matchingame\\pam.JPG"));
+			image = ImageIO.read(new File("\\Users\\dillmanl2093\\Documents\\NetBeansProjects\\FinalProject\\src\\finalproject\\pam.JPG"));
 
 		}
 		catch(Exception e)
