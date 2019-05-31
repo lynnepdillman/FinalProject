@@ -17,7 +17,7 @@ public class AngelaCard extends Square{
         super(x, y);
         back = new DmCard(x, y);
         try{
-            image = ImageIO.read(new File("\\Users\\dillmanl2093\\Documents\\NetBeansProjects\\MatchingGame\\src\\Matchingame\\angela.JPG"));
+            image = ImageIO.read(new File("\\Users\\dillmanl2093\\Documents\\NetBeansProjects\\FinalProject\\src\\finalproject\\angela.jpg"));
         }
         catch(Exception e){
             System.out.println("AngelaCard: error");
