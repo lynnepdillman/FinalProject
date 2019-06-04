@@ -1,18 +1,13 @@
 package finalproject;
 
 import static java.lang.Character.toUpperCase;
-
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
-//import java.awt.event.ActionEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
-//import java.awt.event.ActionListener;
-//import java.util.ArrayList;
-//import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Board extends Canvas implements Runnable, KeyListener {
@@ -26,7 +21,6 @@ public class Board extends Canvas implements Runnable, KeyListener {
 	public boolean isCardFlipped = false; 
 	public boolean gameStart = false;
 	public int pairsleft = 8; 
-
 	private boolean[] keys;
 	private BufferedImage back;
 
@@ -51,21 +45,12 @@ public class Board extends Canvas implements Runnable, KeyListener {
 
    public void paint( Graphics window )
 	{	   
-		//set up the double buffering to make the game animation nice and smooth
  		Graphics2D twoDGraph = (Graphics2D)window;
-
-		//take a snap shop of the current screen and same it as an image
-		//that is the exact same width and height as the current screen
 		if(back==null)
 		   back = (BufferedImage)(createImage(getWidth(),getHeight()));
-
-		//create a graphics reference to the back ground image
-		//we will draw all changes on the background image
-		
 		Graphics graphToBack = back.createGraphics();
 		
 		if(initialized == false)
-
 		{
 			graphToBack.setColor(Color.BLACK);
 			graphToBack.drawString("Lynne Dillman, APCS-A p.1", 500, 300);
@@ -76,8 +61,6 @@ public class Board extends Canvas implements Runnable, KeyListener {
 		
 		if(keys[0] == true && !initialized)
 		{
-//			System.out.println("Space key pressed");
-//			System.out.println("Canvas initialized");
 			initialized = true;
 			graphToBack.clearRect(0, 0, 800, 800);
 			
@@ -93,7 +76,6 @@ public class Board extends Canvas implements Runnable, KeyListener {
 		
 		if(keys[3] && !isCardFlipped)
 		{
-//			System.out.println("S key is pressed");
 			gameStart = true;
 			isCardFlipped = true;
 			ArrayList<Square> twoFlipCard = pinks.rand();
@@ -107,11 +89,9 @@ public class Board extends Canvas implements Runnable, KeyListener {
 		
 		if(keys[1] && isCardFlipped)
 		{
-//			System.out.println("Two cards match, Y key is pressed");
 			isCardFlipped = false;
 			if(!pinks.getTwoFlipCardsPair().get(0).getClass().equals(pinks.getTwoFlipCardsPair().get(1).getClass()))
 			{
-//				System.out.println("But they are not matching cards");
 				graphToBack.setColor(Color.WHITE);
 				graphToBack.fillRect(0, 0, 1300, 1300);
 				graphToBack.setColor(Color.BLACK);
@@ -130,7 +110,6 @@ public class Board extends Canvas implements Runnable, KeyListener {
 				graphToBack.clearRect(xPos2, yPos2, 150, 150);
 				
 				pairsleft = pairsleft - 1; 
-//				System.out.println(pairsleft);
 				pinks.addMatch();
 				
 				graphToBack.clearRect(0, 0, 800, 50);
@@ -142,11 +121,9 @@ public class Board extends Canvas implements Runnable, KeyListener {
 		
 		if(keys[2] && isCardFlipped)
 		{
-//			System.out.println("Two cards doesn't match, N key is pressed");
 			isCardFlipped = false;
 			if(pinks.getTwoFlipCardsPair().get(0).getClass().equals(pinks.getTwoFlipCardsPair().get(1).getClass()))
 			{
-//				System.out.println("But they are matching cards");
 				graphToBack.setColor(Color.WHITE);
 				graphToBack.fillRect(0, 0, 1300, 1300);
 				graphToBack.setColor(Color.BLACK);
