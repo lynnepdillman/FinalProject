@@ -2,9 +2,6 @@ package finalproject;
 
 public class StartScreenGUI extends javax.swing.JFrame {
 
-    /**
-     * Creates new form StartScreenGUI
-     */
     public static boolean play;
     
     public StartScreenGUI() {
